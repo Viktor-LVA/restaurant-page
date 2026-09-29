@@ -2,19 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
 }
 
 body {
     --header-height: 20px;
 
+    color: white;
+
     min-height: 100vh;
-  
     background-image: url('./images/background.webp');
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed; /* фиксирует фон при скролле */
-    
     background-size: cover; /* масштабирует картинку под размеры экрана без искажений */
 }
 
@@ -22,17 +21,15 @@ header {
     height: var(--header-height);
 }
 
-#content {
-    height: calc(100vh - var(--header-height));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+nav {
+    padding: 20px;
 }
 
-#content > h1, p {
-    /* Толщина и цвет обводки */
-  -webkit-text-stroke: 6px black;
-  paint-order: stroke fill;       /* Сначала рисуется обводка, затем заливка поверх */
+nav > button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
 }
