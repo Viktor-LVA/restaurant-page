@@ -1,13 +1,4 @@
-#content {
-    height: calc(100vh - var(--header-height));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-#content > h1, p {
-    -webkit-text-stroke: 6px black; /* толщина и цвет обводки */
-    paint-order: stroke fill; /* сначала рисуется обводка, затем заливка поверх */
+.about > h1,
+.about > p {
+    -webkit-text-stroke: 6px blue; /* толщина и цвет обводки */
 }

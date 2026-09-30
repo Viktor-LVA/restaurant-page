@@ -33,3 +33,17 @@ nav > button {
     color: white;
     cursor: pointer;
 }
+
+#content {
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.base > h1,
+.base > p {
+    paint-order: stroke fill; /* сначала рисуется обводка, затем заливка поверх */
+}

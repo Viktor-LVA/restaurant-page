@@ -2,6 +2,9 @@ import './menu.css'
 
 export function insertMenuContent(div) {
     div.replaceChildren()
+    const sepStyles = div.className.split(' ')
+    sepStyles[1] = 'menu'
+    div.className = sepStyles.join(' ')
 
     const h1 = document.createElement('h1')
     const p = document.createElement('p')

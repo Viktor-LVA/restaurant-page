@@ -1,3 +1,5 @@
+import './styles.css'
+
 import { insertHomeContent } from './modules/home/home.js'
 import { insertMenuContent } from './modules/menu/menu.js'
 import { insertAboutContent } from './modules/about/about.js'
@@ -8,9 +10,28 @@ function getDiv() {
 
 const container = getDiv()
 
-insertHomeContent()//!!!
+function addListeners() {
+    const buttons = document.querySelectorAll('button')
 
-/*
-Каждый модуль будет экспортировать функцию, которая создает элемент `div`, добавляет к нему соответствующее содержимое и стили!!!, а затем добавляет его в DOM.
-Логику переключения вкладок следует написать внутри тега <tab> index.js. Для каждой кнопки в навигационной панели заголовка должны быть обработчики событий, которые очищают текущее содержимое тега <tab> div#content, а затем запускают соответствующий "модуль вкладок" для заполнения его новым содержимым.
-*/
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            switch (index) {
+                case 0:
+                    insertHomeContent(container)
+                    break;
+                case 1:
+                    insertMenuContent(container)
+                    break;
+                case 2:
+                    insertAboutContent(container)
+                    break;
+                default:
+                    break;
+            }
+        })
+    })
+}
+
+addListeners()
+
+insertHomeContent(container)

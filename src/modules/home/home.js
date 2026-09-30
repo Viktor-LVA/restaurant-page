@@ -2,6 +2,9 @@ import './home.css'
 
 export function insertHomeContent(div) {
     div.replaceChildren()
+    const sepStyles = div.className.split(' ')
+    sepStyles[1] = 'home'
+    div.className = sepStyles.join(' ')
     
     const h1 = document.createElement('h1')
     const p = document.createElement('p')

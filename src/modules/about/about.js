@@ -2,6 +2,9 @@ import './about.css'
 
 export function insertAboutContent(div) {
     div.replaceChildren()
+    const sepStyles = div.className.split(' ')
+    sepStyles[1] = 'about'
+    div.className = sepStyles.join(' ')
 
     const h1 = document.createElement('h1')
     const p = document.createElement('p')
